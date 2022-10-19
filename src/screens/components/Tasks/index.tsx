@@ -7,10 +7,10 @@ type TaskType = {
 };
 export function Tasks({ task, onRemove }: TaskType) {
   return (
-    <View>
+    <View style={styles.bodyTask}>
       <Text style={styles.task}>{task}</Text>
       <TouchableOpacity onPress={onRemove}>
-        <Text>Ícone da Lixeira</Text>
+        <Text style={styles.iconTrash}>🗑️</Text>
       </TouchableOpacity>
     </View>
   );

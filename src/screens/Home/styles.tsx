@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     flex: 5,
   },
   bottomFrame: {
-    backgroundColor: "white",
+    backgroundColor: "#0D0D0F",
     width: 400,
     height: 560,
     // flexDirection: "row",
