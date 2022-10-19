@@ -14,6 +14,8 @@ export default function Home() {
   // const [state, setState]
   const [tasks, setTasks] = useState<string[]>([]);
   const [taskDescription, setTaskDescription] = useState("");
+  const countCreated = tasks.length;
+  const countCompleted = 0;
 
   // function task includes
   function handlerAddTask() {
@@ -25,12 +27,12 @@ export default function Home() {
     }
     if (taskDescription != "") {
       setTasks((prevState) => [...prevState, taskDescription]);
-      setTaskDescription("");
     } else
       return Alert.alert(
         "Campo Vazio!",
         "Adicione informações para poder incluir uma nova tarefa em sua lista."
       );
+    setTaskDescription("");
     return console.log(tasks);
   }
   // function task delete
@@ -48,8 +50,7 @@ export default function Home() {
     ]);
   }
 
-  // return console.log("Você clicou para excluir a tarefa!");
-
+  // screen componentization
   return (
     <>
       <View style={styles.topFrame}>
@@ -67,7 +68,9 @@ export default function Home() {
 
       <View style={styles.centerFrame}>
         <Text style={styles.createdItem}>Criadas</Text>
+        <Text style={styles.countCreated}>{countCreated}</Text>
         <Text style={styles.finishedItem}>Concluídas</Text>
+        <Text style={styles.countCompleted}>{countCompleted}</Text>
       </View>
       <View style={styles.bottomFrame}>
         <FlatList
