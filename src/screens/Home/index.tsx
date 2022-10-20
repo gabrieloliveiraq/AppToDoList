@@ -36,12 +36,12 @@ export default function Home() {
     return console.log(tasks);
   }
   // function task delete
-  function handlerTaskRemove(name: String) {
-    Alert.alert("Remover", `Deseja remover a tarefa "${name}"?`, [
+  function handlerTaskRemove(task: String) {
+    Alert.alert("Remover", `Deseja remover a tarefa "${task}"?`, [
       {
         text: "Sim",
         onPress: () =>
-          setTasks((prevState) => prevState.filter((Task) => Task !== name)),
+          setTasks((prevState) => prevState.filter((Task) => Task !== task)),
       },
       {
         text: "Não",

@@ -12,8 +12,15 @@ export const styles = StyleSheet.create({
   task: {
     color: "#F2F2F2",
     flex: 1,
+    marginLeft: 40,
   },
   iconTrash: {
     fontSize: 15,
   },
+  containercheckBox: {
+    flexDirection: "row",
+    position: "absolute",
+    // backgroundColor: "red",
+  },
+  checkBox: {},
 });
